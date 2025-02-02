@@ -1,0 +1,90 @@
+@use '../helpers' as *;
+
+.hero {
+  display: block;
+  position: relative;
+  width: auto;
+  background: url(../../img/college/college.png) no-repeat center, var(--color2);
+  background-position: center;
+  background-size: cover;
+
+  @include mobile {
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__main {
+    @include mobile-above {
+      display: grid;
+      grid-template-columns: 12% 43% auto;
+      grid-template-areas:
+      'logo body student';
+      position: relative;
+      overflow: hidden;
+    }
+
+    @include mobile {
+      padding: rem(86) rem(40);
+    }
+  }
+
+  &__logo {
+    display: inline;
+    padding-top: rem(10);
+    min-width: rem(200);
+    max-width: 40%;
+
+  }
+
+  &__body {
+    grid-area: body;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: rem(50);
+    padding-bottom: rem(100);
+    margin-inline: rem(30);
+  }
+
+  &__title {
+    font-family: var(--font-family-base);
+    font-weight: 700;
+    color: var(--color3);
+
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+
+      @include mobile {
+        margin-bottom: rem(10);
+      }
+    }
+  }
+
+  &__subtitle {
+    @include fluid-text(30, 24);
+
+    font-family: var(--font-family-base);
+    font-weight: 700;
+    color: var(--color3);
+    line-height: rem(36);
+
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+
+      @include mobile {
+        margin-bottom: rem(14);
+      }
+    }
+  }
+
+  &__student {
+    grid-area: student;
+    align-self: end;
+    max-width: 80%;
+  
+    @include mobile {
+      display: none;
+    }
+  }
+}

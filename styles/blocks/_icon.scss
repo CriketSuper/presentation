@@ -1,0 +1,119 @@
+@use '../helpers' as *;
+
+.icon {
+    & {
+        display: inline-flex;
+        align-items: center;
+        column-gap: rem(10);
+
+        --size: #{rem(30)};
+        @include square(var(--size));
+
+        content: '';
+        flex-shrink: 0;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &--logo {
+        --size: #{rem(100)};
+
+        @include tablet {
+            --size: #{rem(120)};
+        }
+    }
+
+    &--checkmark {
+        position: relative;
+        transition: transform var(--transition-duration) ease;
+        background-image: url('../../icons/pointer/checkmark.svg');
+    }
+
+    &--widgets {
+        width: rem(80);
+        height: rem(65);
+        background: var(--color2);
+        padding: rem(13);
+        border: 0;
+        cursor: pointer;
+    
+        &:hover {
+            background: var(--color6);
+            box-shadow: 0 rem(6) rem(8) var(--color2);
+        }
+    }
+
+    &--arrow-circle {
+        position: relative;
+        fill: none;
+        width: rem(72);
+        height: rem(72);
+        right: 1.4rem;
+    }
+
+    &--social {
+        --size: #{rem(80)};
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform var(--transition-duration) ease;
+
+        @include tablet {
+            --size: #{rem(100)};
+        }
+
+        &-circle {
+            position: absolute;
+            width: rem(80);
+            height: rem(80);
+            border-radius: 50%;
+            transition: transform var(--transition-duration) ease,
+                        opacity var(--transition-duration) ease;
+            z-index: 1;
+            background-color: var(--color3);
+
+            @include tablet {
+                width: rem(100);
+                height: rem(100);
+            }
+        }
+        
+        & svg {
+            --size: #{rem(50)};
+            z-index: 2;
+            transition: transform var(--transition-duration) ease,
+                        fill var(--transition-duration) ease;
+            fill: var(--color2);
+            
+            @include tablet {
+                --size: #{rem(60)};
+            }
+        }
+    
+        &:hover {
+            .icon--social-circle {
+                transform: scale(0);
+            }
+
+            & svg {
+                transform: scale(1.5);
+                fill: var(--color3);
+            }
+        }
+    }
+
+    &--back-to-top {
+        --size: #{rem(150)};
+    }
+}
+
+.header__menu-item:hover {
+    & .icon--checkmark {
+        transform: rotate(-180deg);
+    }
+
+}

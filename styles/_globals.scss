@@ -1,0 +1,156 @@
+@use 'helpers' as *;
+
+html {
+  &.is-lock {
+    overflow: hidden;
+  }
+
+  font-size: 62.5%;
+  background: var(--app-background);
+
+  @include tablet {
+    font-size:calc(-2.04706px + 1.56863vw)
+  }
+  
+  @include laptop {
+    font-size:calc(1.90476px + .59524vw)
+  }
+}
+
+@include mobile {
+  html {
+    font-size:calc(-0.9px + 1.5vw);
+  }
+}
+
+body {
+  @include fluid-text(24);
+
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  overflow-x: hidden;
+  letter-spacing: 0.03rem;
+  color: var(--color4);
+  background-color: var(--color3);
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  color: var(--color3);
+}
+
+h2, .h2 {
+  display: flex;
+  align-items: flex-start;
+  flex-grow: 1;
+  justify-content: space-between;
+  position: relative;
+  height: rem(50);
+  top: 0;
+  left: 0;
+  color: var(--color4);
+  white-space: nowrap;
+  margin-bottom: rem(80);
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  font-family: var(--font-family-accent);
+  font-weight: 700;
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-weight: 600;
+}
+
+h1, .h1 {
+  @include fluid-text(68, 32);
+  line-height: 1.2;
+}
+
+h2, .h2 {
+  @include fluid-text(54, 32);
+  line-height: 1.3;
+}
+
+h3, .h3 {
+  @include fluid-text(40, 30);
+}
+
+h4, .h4 {
+  @include fluid-text(30, 18);
+}
+
+h5, .h5 {
+  @include fluid-text(28, 18);
+}
+
+h6, .h6 {
+  @include fluid-text(20, 16);
+}
+
+p {
+  --paragraphMarginBottom: #{rem(24)};
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+  outline: rem(2) dashed var(--color3);
+  outline-offset: rem(4);
+  transition-duration: 0s !important;
+}
+
+a,
+button {
+  &[aria-label] {
+    position: relative;
+
+    &::before {
+      @include abs-center;
+      @include square(rem(44));
+
+      content: '';
+    }
+  }
+}
+
+svg {
+  flex-shrink: 0;
+}

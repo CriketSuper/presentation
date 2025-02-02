@@ -1,0 +1,123 @@
+@use '../helpers' as *;
+
+.ad {
+    width: 100%;
+    
+    h2 {
+        justify-content: left;
+        align-items: center;
+        width: auto;
+        height: auto;
+        border-bottom: rem(10) solid var(--color4);
+        margin-bottom: rem(15);
+        padding-bottom: rem(25);
+        flex-grow: 0;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: rem(5);
+        margin: 0 auto;
+
+        &-block {
+            position: relative;
+            background: var(--color3);
+            overflow: visible auto;
+            transition: transform var(--transition-duration);
+            border-bottom: rem(5) solid var(--color7);
+            
+            .ad {
+                &__data {
+                    display: block;
+                    position: relative;
+                    color: var(--color1);
+                    font-family: var(--default-font-family);
+                    font-size: rem(44);
+                    font-weight: 700;
+                    text-align: left;
+                    white-space: wrap;
+                }
+
+                &__details {
+                    display: block;
+                    position: relative;
+                    color: var(--color4);
+                    font-family: var(--default-font-family);
+                    font-size: rem(36);
+                    font-weight: 700;
+                    line-height: rem(50);
+                    text-align: left;
+                    overflow: visible;
+
+                    &-name {
+                        display: block;
+                        position: relative;
+                        margin-top: rem(15);
+                        color: var(--color4);
+                        font-family: var(--default-font-family);
+                        font-size: rem(36);
+                        font-weight: 700;
+                        line-height: rem(50);
+                        text-align: left;
+                        overflow: visible;
+                    }
+
+                    &-description {
+                        padding: rem(10);
+                        margin: rem(20) 0;
+                        border: rem(5) solid var(--color7);
+                        border-radius: rem(10);
+                        box-shadow: inset 0 0 rem(10) var(--color7);
+                    }
+                }
+
+                &__name {
+                    display: block;
+                    position: relative;
+                    margin: rem(20) 0;
+                    color: var(--color4);
+                    font-family: var(--default-font-family);
+                    font-size: rem(36);
+                    font-weight: 700;
+                    line-height: rem(50);
+                    text-align: left;
+                    overflow: visible;
+                }
+
+                &__time-location {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    margin: rem(20) 0;
+                    flex-wrap: wrap;
+                    white-space: wrap;
+                    flex-shrink: 0;
+                    gap: rem(300);
+                    color: var(--color5);
+                    font-family: var(--default-font-family);
+                    font-size: rem(36);
+                    font-weight: 700;
+                    line-height: rem(50);
+                    text-align: left;
+
+                    @include mobile {
+                        justify-content: space-between;
+                        gap: 0;
+                    }
+                }
+            }
+
+            &:hover {
+                transform: scale(1.02);
+            }
+        }
+    }
+
+
+}
+//   @media (max-width: 767px) {
+//     .announcement_time-location {
+
+//     }
+//   }

@@ -1,0 +1,67 @@
+@use '../helpers' as *;
+
+.statistics {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: rem(50);
+    align-items: start;
+    justify-content: center;
+    height: rem(800);
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: auto;
+      height: auto;
+      font-size: rem(72);
+    }
+  }
+
+  &__background {
+    background: url(../../img/college/corpus.png) no-repeat center/80%;
+    filter: grayscale(50%) contrast(110%);
+  }
+
+  &__text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: rem(70);
+    color: var(--color4);
+    font-family: var(--default-font-family);
+    font-size: rem(64);
+    font-weight: bold;
+    line-height: rem(70);
+    text-align: left;
+    white-space: nowrap;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.4s ease;
+    border-bottom: rem(3) solid var(--color7);
+    padding-bottom: rem(80);
+
+    &.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    &-description {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: relative;
+      width: auto;
+      color: var(--color4);
+      font-family: var(--default-font-family);
+      font-size: rem(28);
+      font-weight: 300;
+      line-height: rem(36);
+      text-align: left;
+      top: rem(15);
+    }
+  }
+
+  .all-links {
+    margin: 0;
+  }
+}

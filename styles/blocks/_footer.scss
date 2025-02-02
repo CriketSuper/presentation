@@ -1,0 +1,152 @@
+@use '../helpers' as *;
+
+.footer {
+  color: var(--color3);
+  background-color: var(--color2);
+
+  a {
+    @include hover {
+      transform: scale(1.03);
+      filter: brightness(9);
+      text-shadow: rem(0.5) rem(0.5) rem(0.5) var(--color3);
+    }
+  }
+
+  &__columns {
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+    margin-left: -2.7rem;
+    display: flex;
+    justify-content: space-between;
+
+    > * {
+      padding-top: 2.5rem;
+      font-size: rem(32);
+      margin: 3.2rem 0 0 2.6rem;
+    }
+
+    &-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: calc(25% - 2.7rem);
+
+      @include tablet {
+        width: calc(50% - 10rem);
+      }
+  
+      .footer__menu-link:not(:last-child) {
+        margin-bottom: 2.4rem;
+      }
+    }
+  }
+
+  &__main {
+    &-item {
+      line-height: 2rem;
+      display: inline-block;
+      margin-bottom: 1.2rem;
+      font-weight: auto;
+  
+      &:not(:first-child) {
+        margin-top: 1.4rem;
+      }
+    }
+    
+    &-link {
+      font-weight: 600;
+  
+      & span {
+        margin-top: rem(25);
+      }
+
+      &:not(:last-of-type) {
+        margin-bottom: rem(25);
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 3.2rem;
+
+    @include tablet {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    & a {
+      &:not(:last-child) {
+          margin-right: 2rem;
+      }
+    }
+  }
+
+  &__crest-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem 0;
+
+    img {
+      width: 15%;
+    }
+
+    &:before, &:after {
+      position: absolute;
+      top: 50%;
+      width: 42%;
+      height: rem(1);
+      background: white;
+      content: "";
+    }
+
+    &:before {
+      left: 0;
+    }
+
+    &:after {
+      right: 0;
+    }
+  }
+
+  &__foot {
+    margin-top: 4rem;
+    padding-block: 2rem;
+    background-color: var(--color6);
+
+    &-links {
+      display: inline-flex;
+      flex-flow: row wrap;
+      gap: 2.6rem;
+    }
+
+    &-logo {
+      transition: opacity var(--transition-duration) ease;
+
+      svg {
+        width: 8.2rem;
+        height: 1.8rem;
+      }
+    }
+  }
+
+  &__info {
+    &-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 4.1rem;
+
+      & p {
+        margin: 0;
+        text-align: center;
+        font-size: 2rem;
+      }
+    }
+  }
+}

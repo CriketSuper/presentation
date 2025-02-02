@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>nv-study.ru</title>
+  <link rel="stylesheet" href="./styles/main.css" />
+  <script src="./scripts/main.js" type="module" defer></script>
+</head>
+<body>
+  <header>
+    <div class="widgets">
+      <div class="header__widgets">
+        <!-- Поисковая строка -->
+        <div class="header__widgets-search-bar">
+          <input 
+              type="text" 
+              class="search-input" 
+              placeholder="Введите ваш запрос..." 
+          />
+          <button class="search-button" aria-label="Поиск">
+            <svg class="icon icon--widgets">
+              <use xlink:href="./sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Версия для слабовидящих -->
+        <div class="header__widgets-visually-impaired">
+            <button class="">
+              <svg class="icon icon--widgets">
+                <use xlink:href="./sprite.svg#visually-impaired"></use>
+              </svg>
+            </button>
+        </div>
+
+        <!-- Личный кабинет -->
+        <a class="header__widgets-personal-account" href="http://5.158.118.208/">
+          <svg class="icon icon--widgets">
+              <use xlink:href="./sprite.svg#personal-account"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="header header__body">
+      <div class="header__body-inner">
+        <a 
+          class="header__logo"
+          href=""
+          title="Home"
+          aria-label="Home"
+        >
+          <svg class="icon icon--logo">
+            <use xlink:href="./sprite.svg#logo"></use>
+          </svg>
+        </a>
+        <div class="header__overlay">
+          <nav class="header__menu">
+            <div class="header__menu-list">
+              <div class="header__menu-item">
+                <div class="header__menu-dropdown">
+                  <button class="header__menu-dropdown-button">
+                    <span>Сведения об образовательной организации</span>
+                    <svg class="icon icon--checkmark"></svg>
+                  </button>
+                  <div class="header__menu-dropdown-content">
+                    <div class="header__menu-dropdown-content--columns">
+                      <div class="column">
+                        <h3>Оглавление</h3>
+                        <ul>
+                          <li><a href="#">Основные сведения</a></li>
+                          <li><a href="#">Структура и органы управления образовательной организацией</a></li>
+                          <li><a href="#">Документы</a></li>
+                          <li><a href="#">Образование</a></li>
+                          <li><a href="#">Руководство</a></li>
+                          <li><a href="#">Педагогический состав</a></li>
+                          <li><a href="#">Материально-техническое обеспечение и оснащённость образовательного процесса. Доступная среда</a></li>
+                          <li><a href="#">Стипендии и меры поддержки обучающихся</a></li>
+                          <li><a href="#">Платные образовательные услуги</a></li>
+                          <li><a href="#">Финансово-хозяйственная деятельность</a></li>
+                          <li><a href="#">Вакантные места для приёма (перевода) обучающихся</a></li>
+                          <li><a href="#">Международное сотрудничество</a></li>
+                          <li><a href="#">Образовательные стандарты и требования</a></li>
+                          <li><a href="#">Организация питания в образовательной организации</a></li>
+                          <li><a href="#">Комплексная безопасность колледжа</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="header__menu-dropdown">
+                  <button class="header__menu-dropdown-button">
+                    <span>Абитуриентам</span>
+                    <svg class="icon icon--checkmark"></svg>
+                  </button>
+                  <div class="header__menu-dropdown-content">
+                    <div class="header__menu-dropdown-content--columns">
+                      <div class="column">
+                        <h3>Оглавление</h3>
+                        <ul>
+                          <li><a href="#">Поступай правильно!</a></li>
+                          <li><a href="#">Правила приема 2024</a></li>
+                          <li><a href="#">Перечень специальностей (профессий), по которым объявлен приём (с указанием форм обучения)</a></li>
+                          <li><a href="#">Требование к уровню образования, которое необходимо для поступления</a></li>
+                          <li><a href="#">Общее количество мест для приёма по каждой специальности (профессии), в том числе по различным формам обучения</a></li>
+                          <li><a href="#">Перечень документов для поступления</a></li>
+                          <li><a href="#">Образец заявления о приёме</a></li>
+                          <li><a href="#">Информация о необходимости прохождения поступающими обязательного предварительного медицинского осмотра (обследования)</a></li>
+                          <li><a href="#">Прием документов, требования к оформлению</a></li>
+                          <li><a href="#">Перечень вступительных испытаний и формы их проведения</a></li>
+                          <li><a href="#">Особенности проведения вступительных испытаний для инвалидов и лиц с ОВЗ</a></li>
+                          <li><a href="#">Расписание консультаций и расписание вступительных испытаний</a></li>
+                          <li><a href="#">Результаты вступительных испытаний</a></li>
+                          <li><a href="#">Рейтинги поступающих по специальностям</a></li>
+                          <li><a href="#">Правила подачи и рассмотрения апелляций</a></li>
+                          <li><a href="#">Ежедневная статистика приема, конкурс</a></li>
+                          <li><a href="#">О результатах приема по каждой специальности</a></li>
+                          <li><a href="#">Платные образовательные услуги по основным программам СПО</a></li>
+                          <li><a href="#">Образовательное кредитование</a></li>
+                          <li><a href="#">Приказы о зачислении на первый курс</a></li>
+                          <li><a href="#">Информация о наличии общежития и количестве мест в общежитии, выделяемых для иногородних поступающих</a></li>
+                          <li><a href="#">Ответы на часто задаваемые вопросы по приемной кампании</a></li>
+                          <li><a href="#">Социальная поддержка студентов</a></li>
+                          <li><a href="#">Телефоны, адреса приемной комиссии</a></li>
+                          <li><a href="#">Целевое обучение</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="header__menu-dropdown">
+                  <button class="header__menu-dropdown-button">
+                    <span>Студентам</span>
+                    <svg class="icon icon--checkmark"></svg>
+                  </button>
+                  <div class="header__menu-dropdown-content">
+                    <div class="header__menu-dropdown-content--columns">
+                      <div class="column">
+                        <h3>Оглавление</h3>
+                        <ul>
+                          <li><a href="#">Кураторы</a></li>
+                          <li><a href="#">График промежуточной аттестации</a></li>
+                          <li><a href="#">Практика</a></li>
+                          <li><a href="#">Отдел практики и трудоустройства</a></li>
+                          <li><a href="#">Поддержка студентов</a></li>
+                          <li><a href="#">Численность, перевод, восстановление и отчисление</a></li>
+                          <li><a href="#">Переход на бюджет</a></li>
+                          <li><a href="#">Живи без ошибок. Советы специалистов</a></li>
+                          <li><a href="#">Студенческий спортивный клуб</a></li>
+                          <li><a href="#">Финансовая грамотность</a></li>
+                          <li><a href="#">Безопасный Интернет</a></li>
+                          <li><a href="#">Правила пользования библиотекой, ресурсы библиотеки</a></li>
+                          <li><a href="#">Профилактика COVID-19</a></li>
+                          <li><a href="#">Единый государственный экзамен - 2025</a></li>
+                          <li><a href="#">Навигатор дистанта</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="header__menu-dropdown">
+                  <button class="header__menu-dropdown-button">
+                    <span>Выпускникам</span>
+                    <svg class="icon icon--checkmark"></svg>
+                  </button>
+                  <div class="header__menu-dropdown-content">
+                    <div class="header__menu-dropdown-content--columns">
+                      <div class="column">
+                        <h3>Оглавление</h3>
+                        <ul>
+                          <li><a href="#">Итоговая аттестация</a></li>
+                          <li><a href="#">Наши партнеры</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="header__menu-dropdown">
+                  <button class="header__menu-dropdown-button">
+                    <span>Преподавателям</span>
+                    <svg class="icon icon--checkmark"></svg>
+                  </button>
+                  <div class="header__menu-dropdown-content">
+                    <div class="header__menu-dropdown-content--columns">
+                      <div class="column">
+                        <h3>Оглавление</h3>
+                        <ul>
+                          <li><a href="#">Порядок заказа учебников</a></li>
+                          <li><a href="#">Библиотечные новинки</a></li>
+                          <li><a href="#">Периодические издания</a></li>
+                          <li><a href="#">Наши публикации</a></li>
+                          <li><a href="#">Сетевые сообщества педагогов</a></li>
+                          <li><a href="#">Наставничество</a></li>
+                          <li><a href="#">Разговоры о важном</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <button 
+          class="header__burger-button burger-button visible-mobile" 
+          type="button"
+          aria-label="Открыть Меню"
+          title="Открыть Меню"
+        >
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Шапка сайта -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__main container">
+        <img 
+        class="hero__logo"
+        src="./icons/logo.svg" 
+        alt="" 
+        >
+        <div class="hero__body">
+          <h1 class="hero__title" id="hero-title">НИЖНЕВАРТОВСКИЙ СОЦИАЛЬНО-ГУМАНИТАРНЫЙ КОЛЛЕДЖ</h1>
+          <h3 class="hero__subtitle">Бюджетное учреждение профессионального образования Ханты-Мансийского автономного округа - Югры</h3>
+          <div>
+            <a class="hero__button">
+              <span class="button__dot-1 dot"></span>
+              <span class="button__dot-2 dot"></span>
+              <span class="button__dot-3 dot"></span>
+              <span class="button__dot-4 dot"></span>
+              <span class="button__dot-5 dot"></span>
+              <span class="button__dot-6 dot"></span>
+              <span class="button__dot-7 dot"></span>
+              <span class="button__title">ПОСТУПИТЬ<span>
+            </a>
+          </div>
+        </div>
+        <img class="hero__student" src="/img/college/student.png" alt="">
+      </div>
+    </section>
+
+    <!-- Новости -->
+    <section class="news container">
+      <h2>Новости</h2>
+      <div class="news__container">
+        <article class="news__container-block">
+          <img src="../img/college/news.png" alt="Главная новость">
+          <div class="news__block">
+            <h4 class="news__block-name">Наименование новости</h4>
+            <p class="news__block-data">Дата публикации</p>
+          </div>
+        </article>
+        <article class="news__container-block">
+          <img src="../img/college/news.png" alt="Главная новость">
+          <div class="news__block">
+            <h4 class="news__block-name">Наименование новости</h4>
+            <p class="news__block-data">Дата публикации</p>
+          </div>
+        </article>
+        <article class="news__container-block">
+          <img src="../img/college/news.png" alt="Главная новость">
+          <div class="news__block">
+            <h4 class="news__block-name">Наименование новости</h4>
+            <p class="news__block-data">Дата публикации</p>
+          </div>
+        </article>
+        <article class="news__container-block">
+          <img src="../img/college/news.png" alt="Главная новость">
+          <div class="news__block">
+            <h4 class="news__block-name">Наименование новости</h4>
+            <p class="news__block-data">Дата публикации</p>
+          </div>
+        </article>
+      </div>
+
+      <a class="all-links">
+        <button>
+          <span class="all-links__text">Все новости</span>
+          <span class="icon circle" aria-hidden="true">
+            <svg class="icon icon--arrow-circle">
+              <use href="sprite.svg#icon-arrow-right_1"></use>
+            </svg>
+          </span>
+        </button>
+      </a>
+    </section>
+
+    <!-- Объявления -->
+    <section class="ad container">
+      <h2>Объявления</h2>
+      <div class="ad__container">
+        <!-- Объявление №1 -->
+        <div class="ad__container-block">
+          <span class="ad__data">Дата публикации</span>
+          <details class="ad__details">
+            <summary class="ad__details-name">
+              <img src="images/arrow-down.svg" alt="">
+              Текстовое поле
+            </summary>
+            <div class="ad__details-description">Описание</div>
+          </details>
+          <div class="ad__time-location">
+            <span>Время</span>
+            <span>Место провидения</span>
+          </div>
+        </div>
+
+        <!-- Объявление №2 -->
+        <div class="ad__container-block">
+          <span class="ad__data">Дата публикации</span>
+          <details class="ad__details">
+            <summary class="ad__details-name">
+              <img src="images/arrow-down.svg" alt="">
+              Текстовое поле
+            </summary>
+            <div class="ad__details-description">Описание</div>
+          </details>
+          <div class="ad__time-location">
+            <span>Время</span>
+            <span>Место провидения</span>
+          </div>
+        </div>
+
+        <!-- Объявление №3 -->
+        <div class="ad__container-block">
+          <span class="ad__data">Дата публикации</span>
+          <details class="ad__details">
+            <summary class="ad__details-name">
+              <img src="images/arrow-down.svg" alt="">
+              Текстовое поле
+            </summary>
+            <div class="ad__details-description">Описание</div>
+          </details>
+          <div class="ad__time-location">
+            <span>Время</span>
+            <span>Место провидения</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- НСГК в цифрах -->
+    <section class="statistics container">
+      <div class="title">
+        <h2 style="color: #0171bd;">НСГК в цифрах</h2>
+      </div>
+      <div class="statistics__container statistics__background">
+        <!-- Block 1 -->
+        <div class="statistics__block">
+          <div class="statistics__text">> 92%</div>
+          <div class="statistics__text-description">преподавателей имеют высокую квалификационную категорию</div>
+        </div>
+        <!-- Block 2 -->
+        <div class="statistics__block">
+          <div class="statistics__text">15</div>
+          <div class="statistics__text-description">Направлений обучения</div>
+        </div>
+        <!-- Block 3 -->
+        <div class="statistics__block">
+          <div class="statistics__text">> 1000</div>
+          <div class="statistics__text-description">электронных образовательных ресурсов</div>
+        </div>
+        <!-- Block 4 -->
+        <div class="statistics__block">
+          <div class="statistics__text">871</div>
+          <div class="statistics__text-description">обучающихся из списка ТОП-регион</div>
+        </div>
+        <!-- Block 5 -->
+        <div class="statistics__block">
+          <div class="statistics__text">1199</div>
+          <div class="statistics__text-description">студентов, обучающихся по программам индивидуального обучения</div>
+        </div>
+        <!-- Block 6 -->
+        <div class="statistics__block">
+          <div class="statistics__text">98%</div>
+          <div class="statistics__text-description">учебных аудиторий оснащено интерактивными средствами обучения</div>
+        </div>
+        <!-- Block 7 -->
+        <div class="statistics__block">
+          <div class="statistics__text">12</div>
+          <div class="statistics__text-description">программ дополнительного профессионального образования</div>
+        </div>
+        <!-- Block 8 -->
+        <div class="statistics__block">
+          <div class="statistics__text">100%</div>
+          <div class="statistics__text-description">выпускников трудоустроены</div>
+        </div>
+        <!-- Block 9 -->
+        <div class="statistics__block">
+          <div class="statistics__text">64%</div>
+          <div class="statistics__text-description">выпускников трудоустроены по специальности</div>
+        </div>
+      </div>
+
+      <a class="all-links">
+        <button>
+          <span class="all-links__text">О колледже</span>
+          <span class="icon circle" aria-hidden="true">
+            <svg class="icon icon--arrow-circle">
+              <use href="sprite.svg#icon-arrow-right_1"></use>
+            </svg>
+          </span>
+        </button>
+      </a>
+    </section>
+
+    <!-- Специальности -->
+    <section class="specialties">
+      <div class="container">
+        <h2 style="color: #0171bd;">ВАШ ПУТЬ НАЧИНАЕТСЯ ЗДЕСЬ!</h2>
+        <button class="scroll-left">‹</button>
+        <div class="specialties__container scrollbar-container">
+          <div class="specialties__container-item" style="--img: url(../img/college/news.png);" data-text="Сетевое и системное администрирование"></div>
+          <div class="specialties__container-item" style="--img: url(../img/college/news.png);" data-text="Информационные системы и программирование"></div>
+          <div class="specialties__container-item" style="--img: url(../img/college/news.png);" data-text="Экономика и бухгалтерский учет"></div>
+          <div class="specialties__container-item" style="--img: url(../img/college/news.png);" data-text="Страховое дело"></div>
+          <div class="specialties__container-item" style="--img: url(../img/college/news.png);" data-text="Банковское дело"></div>
+          <div class="specialties__container-item" style="--img: url(../img/college/news.png);" data-text="Туризм и гостеприимство"></div>
+          <div class="specialties__container-item" style="--img: url(../img/college/news.png);" data-text="Дошкольное образование"></div>
+          <div class="specialties__container-item" style="--img: url(../img/college/news.png);" data-text="Преподавание в начальных классах"></div>
+          <div class="specialties__container-item" style="--img: url(../img/college/news.png);" data-text="Коррекционная педагогика в начальном образовании"></div>
+          <div class="specialties__container-item" style="--img: url(../img/college/news.png);" data-text="Документационное обеспечение управления и архивоведение"></div>
+          <div class="specialties__container-item" style="--img: url(../img/college/news.png);" data-text="Физическая культура"></div>
+          <div class="specialties__container-item" style="--img: url(../img/college/news.png);" data-text="Музыкальное образование"></div>
+        </div>
+        <button class="scroll-right">›</button>
+
+        <a class="all-links">
+          <button>
+            <span class="all-links__text">Все направления</span>
+            <span class="icon circle" aria-hidden="true">
+              <svg class="icon icon--arrow-circle">
+                <use href="sprite.svg#icon-arrow-right_1"></use>
+              </svg>
+            </span>
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <!-- Актуальное -->
+    <section class="actual container">
+      <div>
+        <h2>Актуальное</h2>
+      </div>
+      <div class="actual__container">
+        <div class="actual__container-director">
+          <h3>Задать вопрос Директору</h3>
+          <p>Если у вас есть предложения, вопросы или замечания к администрации колледжа, вы можете обратиться сюда.<br></p>
+          <p>Все обращения рассматриваются в течение 30 дней, и ответ будет направлен на указанную в обращении электронную почту.<br></p>
+          <p>Также можно оценить качество образовательных услуг по основным программам СПО.<br></p>
+        </div>
+        <div class="actual__container-priem-company">
+          <h3>Приёмная кампания 2025</h3>
+          <ul>
+            <li><a href="#">Списки приема ↗</a></li>
+            <li><a href="#">Правила приема ↗</a></li>
+            <li><a href="#">Количество мест ↗</a></li>
+            <li><a href="#">Перечень вступительных испытаний ↗</a></li>
+            <li><a href="#">Перечень специальностей ↗</a></li>
+          </ul>
+        </div>
+        <div class="actual__container-activists">
+          <h3>Активисты</h3>
+          <img>
+        </div>
+        <div class="actual__container-purposes">
+          <h3>Цели БУ НСГК</h3>
+          <p>
+            Обеспечение качественной подготовки специалистов,
+            соответствующих требованиям рынка труда, развитие профессиональных навыков и компетенций,
+            содействие личностному росту студентов и их успешной адаптации в профессиональной среде.
+          </p>
+          <svg>
+            <use xlink:href="./sprite.svg#logo"></use>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Проекты -->
+    <section class="projects container">
+      <div>
+        <h2>Наши Проекты</h2>   
+      </div>
+      <div class="projects-links">
+          <a href="http://bpoo.chrge.ru/"><img src="./img/proects/bpoo.png" alt="Базовая Профессиональная Образовательная Организация"></a>
+          <a href="https://www.nv-study.ru/NGSKfiles/masterskie/"><img src="./img/proects/modern_workshops.png" alt="Современные мастерские"></a>
+          <a href="https://www.nv-study.ru/abi_new/about/"><img src="./img/proects/abilimpiks.png" alt="Региональный центр развития движения Абилимпикс"></a>
+          <a href="https://www.nv-study.ru/res-centr/about/"><img src="./img/proects/resource_center.png" alt="Ресурсный центр инклюзивного образования"></a>
+          <a href="https://www.nv-study.ru/courses/main/"><img src="./img/proects/odpo.png" alt="Отделение повышения квалификации и профессиональной подготовки"></a>
+          <a href="https://www.nv-study.ru/NSGKfiles/strukt/EIOS/home_eios/"><img src="./img/proects/eios.png" alt="Электронная Информационно-Образовательная Среда"></a>
+        </div>
+    </section>
+    
+    <!-- Кнопка к началу страницы -->
+    <a href="#top" id="BackToTop" title="Вернуться в начало страницы ▲">
+      <div class="back-to-top">
+        <svg class="icon icon--back-to-top">
+          <use xlink:href="./sprite.svg#back-to-top"></use>
+        </svg>
+      </div>
+    </a>
+
+    <!-- Важные ссылки -->
+    <sections class="important-links">
+      <div>
+        <div class="container">
+          <button class="important-links__button">
+            <span>Важные ссылки</span>
+            <svg class="icon icon--checkmark">
+              <use xlink:href="./sprite.svg#checkmark"></use>
+            </svg>                          
+          </button>
+        </div>
+        <div class="important-links__carousel">
+          <div class="carousel-scrollbar">
+            <button class="carousel-scrollbar-left">‹</button>
+            <div class="scrollbar-container">
+              <a href="https://pos.gosuslugi.ru/form/?opaId=310855&utm_source=qr&utm_medium=banner&utm_campaign=310855&utm_term=%D0%A5%D0%B0%D0%BD%D1%82%D1%8B-%D0%9C%D0%B0%D0%BD%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/qr_code2023.png" alt="">
+                </div>
+              </a>
+              <a href="https://www.gosuslugi.ru/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/gosuslugi.png" alt="">
+                </div>
+              </a>
+              <a href="https://edu.gov.ru/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/prosveshchenie.png" alt="">
+                </div>
+              </a>
+              <a href="https://nv-study.ru/upload/iblock/f02/Prilozhieniie.jpg">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/Prilozhieniie_small.jpg" alt="">
+                </div>
+              </a>
+              <a href="https://iom.spbappo.ru/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/cnppm.png" alt="">
+                </div>
+              </a>
+              <a href="https://объясняем.рф/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/obyasnyaem.png" alt="">
+                </div>
+              </a>
+              <a href="https://drugoedelo.ru/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/drugoe_delo.gif" alt="">
+                </div>
+              </a>
+              <a href="https://nv-study.ru/raising-children/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/logoR.png" alt="">
+                </div>
+              </a>
+              <a href="https://nv-study.ru/important_links/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/112.png" alt="">
+                </div>
+              </a>
+              <a href="https://depit.admhmao.ru/upload/iblock/688/Neyronnaya-set-Vika.mp4">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/vi.png" alt="">
+                </div>
+              </a>
+              <a href="https://nv-study.ru/prav_inf/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/prin.png" alt="">
+                </div>
+              </a>
+              <a href="https://dobro.ru/project/10014681">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/mold.png" alt="">
+                </div>
+              </a>
+              <a href="https://nv-study.ru/trud/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/trudsec.png" alt="">
+                </div>
+              </a>
+              <a href="https://znanium.ru/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/zna.png" alt="">
+                </div>
+              </a>
+              <a href="https://urgaps.ru/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/uripkip.png" alt="">
+                </div>
+              </a>
+              <a href="https://nv-study.ru/students/live_right/protivodeystvie-ekstremistskoy-deyatelnosti/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/prot.png" alt="">
+                </div>
+              </a>
+              <a href="https://ligainternet.ru/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/lbezi.png" alt="">
+                </div>
+              </a>
+              <a href="https://72.rkn.gov.ru/directions/pp/p25264/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/rknpd.png" alt="">
+                </div>
+              </a>
+              <a href="https://персональныеданные.дети/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/pdd.png" alt="">
+                </div>
+              </a>
+              <a href="https://intern.rsv.ru/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/stazh.png" alt="">
+                </div>
+              </a>
+              <a href="https://nv-study.ru/students/live_right/protivodeystvie-korruptsii/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/corr.png" alt="">
+                </div>
+              </a>
+              <a href="https://nv-study.ru/students/USE/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/egeb.png" alt="">
+                </div>
+              </a>
+              <a href="https://www.oprf.ru/ru/1449/2134/2205/2206/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/oprf.png" alt="">
+                </div>
+              </a>
+              <a href="https://nvsu.ru/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/nvgu.png" alt="">
+                </div>
+              </a>
+              <a href="https://fadm.gov.ru/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/fadm.png" alt="">
+                </div>
+              </a>
+              <a href="https://depobr.admhmao.ru/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/dephmao.png" alt="">
+                </div>
+              </a>
+              <a href="https://trudvsem.ru/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/trud.png" alt="">
+                </div>
+              </a>
+              <a href="https://nv-study.ru/glory_n_memory/choir/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/75_pobeda.png" alt="">
+                </div>
+              </a>
+              <a href="https://nv-study.ru/pamyatki/">
+                <div class="scrollbar-container-item">
+                  <img src="./img/link/pam.png" alt="">
+                </div>
+              </a>
+            </div>
+            <button class="carousel-scrollbar-right">‹</button>
+          </div>
+        </div>
+      </div>
+    </sections>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__columns">
+        <div class="footer__columns-column">
+          <span class="footer__main-item">Рабочие часы:</span>
+          <a class="footer__main-link">Пн-Пт: 8:00 - 17:00</a>
+          <a class="footer__main-link">Перерыв: 13:00 - 14:00</a>
+        </div>
+        <div class="footer__columns-column">
+          <span class="footer__main-item">Приемная комиссия</span>
+          <a href="tel:83466465429" class="footer__main-link">8 (3466) 46-54-29</a>
+          <a href="mailto:pknsgk@nv-study.ru" class="footer__main-link">pknsgk@nv-study.ru</a>          
+        </div>
+        <div class="footer__columns-column">
+          <span class="footer__main-item">Бухгалтерия</span>
+          <a href="tel:83466436643" class="footer__main-link">8 (3466) 43-66-43</a>
+
+          <span class="footer__main-item">Заселение в общежитие</span>
+          <a href="tel:83466422097" class="footer__main-link">8 (3466) 42-20-97</a>
+          <a href="tel:83466422065" class="footer__main-link">8 (3466) 42-20-65</a>
+        </div>
+        <div class="footer__columns-column">
+          <span class="footer__main-item">Вахта колледжа</span>
+          <a href="tel:83466436643" class="footer__main-link">8 (3466) 43-66-43</a>
+          <!-- <a hraf="https://go.2gis.com/ZLdwY" class="footer__main-link">628602, ХМАО-Югра, г. Нижневартовск, ул. Дружбы Народов, д. 13-а</a> -->
+          <a href="https://go.2gis.com/ZLdwY" class="footer__main-link">628602, ХМАО-Югра, г. Нижневартовск, ул. Дружбы Народов, д. 13-а</a>
+        </div>
+      </div>
+      <div class="footer__social">
+        <a href="#" class="icon icon--social">
+          <div class="icon--social-circle"></div>
+          <svg class="icon">
+              <use href="./sprite.svg#telegram"></use>
+          </svg>
+        </a>
+        <a href="https://vk.com/nsgk_nv" class="icon icon--social">
+          <div class="icon--social-circle"></div>
+          <svg class="icon">
+              <use href="./sprite.svg#vk"></use>
+          </svg>
+        </a>
+        <a href="https://ok.ru/group/70000002418065" class="icon icon--social">
+          <div class="icon--social-circle"></div>
+          <svg class="icon">
+              <use href="./sprite.svg#odnoklassniki"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="footer__crest-container">
+        <img src="./icons/logo.svg">
+      </div>
+      <div class="footer__info-container">
+        <p><b>Наименование организации:</p>
+        <p>БЮДЖЕТНОЕ УЧРЕЖДЕНИЕ ПРОФЕССИОНАЛЬНОГО ОБРАЗОВАНИЯ ХАНТЫ-МАНСИЙСКОГО АВТОНОМНОГО ОКРУГА - ЮГРЫ "НИЖНЕВАРТОВСКИЙ СОЦИАЛЬНО-ГУМАНИТАРНЫЙ КОЛЛЕДЖ"</p>
+        <p>ИНН: 8603068853, ОГРН 1028600961080, ОКПО 02081059</b></p>
+      </div>
+      <div class="footer__columns">
+        <div class="footer__columns-column">
+          <a href="" class="footer__menu-link">Текстовое поле</a>
+          <a href="" class="footer__menu-link">Текстовое поле</a>
+          <a href="" class="footer__menu-link">Текстовое поле</a>
+          <a href="" class="footer__menu-link">Текстовое поле</a>
+        </div>
+        <div class="footer__columns-column">
+          <a href="" class="footer__menu-link">Текстовое поле</a>
+          <a href="" class="footer__menu-link">Текстовое поле</a>
+          <a href="" class="footer__menu-link">Текстовое поле</a>
+          <a href="" class="footer__menu-link">Текстовое поле</a>
+        </div>
+        <div class="footer__columns-column">
+          <a href="" class="footer__menu-link">Текстовое поле</a>
+          <a href="" class="footer__menu-link">Текстовое поле</a>
+          <a href="" class="footer__menu-link">Текстовое поле</a>
+          <a href="" class="footer__menu-link">Текстовое поле</a>
+        </div>
+        <div class="footer__columns-column">
+          <a href="" class="footer__menu-link">Текстовое поле</a>
+          <a href="" class="footer__menu-link">Текстовое поле</a>
+          <a href="" class="footer__menu-link">Текстовое поле</a>
+          <a href="" class="footer__menu-link">Текстовое поле</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__foot">
+      <div class="container">             
+        <div class="footer__foot-links">
+          <a href="" class="footer__menu-link">Карта сайта</a>
+          <a href="" class="footer__menu-link">Пользовательское соглашение</a>
+          <a href="" class="footer__menu-link">Политика по обработке персональных данных</a>
+        </div>
+        <a class="footer__foot-logo" href="">
+          <img src="" class="">
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

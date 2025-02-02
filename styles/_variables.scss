@@ -1,0 +1,33 @@
+@use 'helpers' as *;
+
+:root {
+  --color1:#007dd5;
+  --color2:#0b67af;
+  --color3:#ffffff;
+  --color4:#2e3146;
+  --color5:#429fe0;
+  --color6:#00508a;
+  --color7:#dbdfe8;
+  --color8:#676767;
+  --color9:#a5a5a5;
+
+  --gradient: linear-gradient(
+    45deg,
+    var(--color2) 64%,
+    var(--color-accent) 136%
+  );
+
+  --color-accent: #007dd5;
+
+  --font-family-base: 'Montserrat', sans-serif;
+  // --font-family-base: 'Hind';
+  --font-family-accent: 'Krub', sans-serif;
+  // --font-family-accent: 'Hind';
+
+  --container-width: #{rem(2048)};
+  --container-padding-x: #{rem(16)};
+
+  --transition-duration: 0.2s;
+
+  --100vw: calc(100vw - var(--scrollbar-width));
+}

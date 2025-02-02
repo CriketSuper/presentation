@@ -1,0 +1,101 @@
+@use '../helpers' as *;
+
+.specialties {
+    h2 {
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        height: auto;
+        border-radius: rem(15);
+        border-top: rem(15) solid var(--color4);
+        border-bottom: rem(15) solid var(--color4);
+        margin-bottom: rem(30);
+        padding-block: rem(25);
+        flex-grow: 0;
+    }
+
+    &__container {
+        gap: 1em;
+        height: rem(600);
+        transition: all 400ms;
+        display: flex;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scroll-behavior: smooth;
+
+        @include tablet {
+            height: rem(600);
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &-item {
+            flex: 0 0 calc(20% - 1em);
+            height: 100%;
+            filter: grayscale(100%) opacity(24%);
+            background: var(--img) center center;
+            background-size: cover;
+            transition: all 400ms;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            text-align: center;
+            position: relative;
+            border-radius: rem(50);
+
+            &::after {
+                content: attr(data-text);
+                display: flex;
+                position: absolute;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background: var(--color4);
+                color: var(--color3);
+                padding: rem(10);
+                font-size: rem(28);
+                padding-inline: rem(20);
+                letter-spacing: rem(4);
+                text-transform: uppercase;
+                width: 100%;
+                height: rem(120);
+                transform-origin: center center;
+                border-radius: 0 0 rem(50) rem(50);
+            }
+
+            @include tablet-above {
+                &:hover {
+                    flex: 0 0 45%;
+                    filter: grayscale(0%) opacity(100%);
+            
+                    &::after {
+                        transform: scaleX(1);
+                        opacity: 1;
+                        transition-delay: 400ms;
+                    }
+                }
+            
+                &::after {
+                    transform: scaleX(0);
+                    opacity: 0;
+                    transition: transform var(--transition-duration),
+                                opacity 400ms;
+                }
+            }
+
+            @include tablet {
+                flex: 0 0 49%;
+                height: 80%;
+                filter: grayscale(0%) opacity(100%);
+                font-size: rem(36);
+            }
+
+            @include mobile {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

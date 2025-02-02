@@ -1,0 +1,79 @@
+@use '../helpers' as *;
+
+@mixin transition(
+  $property: all,
+  $duration: 0.45s,
+  $ease: cubic-bezier(0.65, 0, 0.076, 1)
+)
+{transition: $property $duration $ease;}
+
+.all-links {
+  display: flex;
+  justify-content: end;
+  margin-top: rem(40);
+
+  button {
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    font-size: rem(28);
+    font-family: inherit;
+    overflow: hidden;
+  }
+
+  &__text {
+    @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+    white-space: nowrap;
+    left: 0;
+    z-index: 2;
+    padding-block: 1rem;
+    padding-right: 3.8rem;
+    padding-left: 5rem;
+    color: var(--color4);
+    font-weight: 700;
+    line-height: 0.6;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .circle {
+    @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    margin-block: 0.3rem;
+    background: var(--color2);
+    border: 0.3rem solid var(--color1);
+    border-radius: 1.5rem;
+    z-index: 1;
+    right: 0;
+    transition: width 0.45s cubic-bezier(0.65, 0, 0.076, 1),
+                border-radius 0.45s ease;
+
+    .icon {
+      transition: transform 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+      transform: translateX(0);
+    }
+  }
+
+  &:hover {
+    .circle {
+      width: 100%;
+      border-radius: rem(50);
+      justify-content: start;
+
+      .icon {
+        margin-left: 1rem;
+      }
+    }
+
+    .all-links__text {
+      color: #fff;
+    }
+  }
+}

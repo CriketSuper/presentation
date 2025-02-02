@@ -1,0 +1,263 @@
+@use '../helpers' as *;
+
+.header__widgets * {
+  button {
+    flex-shrink: 0;
+    display: inline-flex;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: var(--color2);
+    padding: 0;
+    color: var(--color3);
+    white-space: nowrap;
+  }
+}
+
+button {
+  flex-shrink: 0;
+  display: inline-flex;
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 0;
+  background-color: var(--color3);
+  white-space: nowrap;
+
+  @include laptop {
+    font-size: rem(14);
+  }
+}
+
+.back-to-top{
+  position: fixed;
+  bottom: rem(50);
+  right: rem(50);
+  width: 3vw;
+  height: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform var(--transition-duration) ease;
+
+  button {
+    background-color: none;
+  }
+
+  &:hover {
+    svg {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.scroll-left, .scroll-right {
+  display: none;
+}
+
+.hero__button {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: rem(30);
+
+  &:hover {
+    .button {
+      &__title {
+        &::before, &::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    .dot {
+      transform: translate(0, 0) rotate(var(--rotatation));
+
+      &::after {
+        animation-play-state: running;
+      }
+    }
+  }
+
+  .button {
+    &__title {
+      position: relative;
+      color: var(--color3);
+      font-size: rem(32);
+      font-weight: bold;
+      text-align: center;
+      pointer-events: none;
+      padding: rem(20) rem(40);
+      border-radius: rem(100);
+      background: var(--color1);
+      background: radial-gradient(circle, var(--color1) 0%, var(--color5) 0%);
+  
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: rem(100);
+        transition: opacity var(--transition-duration);
+      }
+  
+      &::before {
+        box-shadow: 0 0 rem(24) #00BFFF;
+        mix-blend-mode: screen;
+        opacity: 0;
+      }
+  
+      &::after {
+        box-shadow: 0 0 rem(24) var(--color5) inset,
+                    0 0 rem(8) var(--color2);
+        opacity: 0;
+      }
+    }
+  
+    &__dot {
+      &-1 {
+        --rotatation: 0deg;
+        --speed: 14s;
+        --size: 6px;
+        --starting-x: 30px;
+        --starting-y: 20px;
+        left: -16px;
+        opacity: 0.7;
+      }
+      
+      &-2 {
+        --rotatation: 122deg;
+        --speed: 16s;
+        --size: 3px;
+        --starting-x: 40px;
+        --starting-y: 10px;
+        top: -9px;
+        left: 0;
+        opacity: 0.7;
+      }
+      
+      &-3 {
+        --rotatation: 39deg;
+        --speed: 20s;
+        --size: 4px;
+        --starting-x: -10px;
+        --starting-y: 20px;
+        top: -8px;
+        right: 2px;
+      }
+      
+      &-4 {
+        --rotatation: 220deg;
+        --speed: 18s;
+        --size: 2px;
+        --starting-x: -30px;
+        --starting-y: -5px;
+        bottom: 4px;
+        right: -14px;
+        opacity: 0.9;
+      }
+      
+      &-5 {
+        --rotatation: 190deg;
+        --speed: 22s;
+        --size: 5px;
+        --starting-x: -40px;
+        --starting-y: -20px;
+        bottom: -6px;
+        right: -2px;
+      }
+      
+      &-6 {
+        --rotatation: 20deg;
+        --speed: 15s;
+        --size: 4px;
+        --starting-x: 12px;
+        --starting-y: -18px;
+        bottom: -12px;
+        left: 30px;
+        opacity: 0.7;
+      }
+      
+      &-7 {
+        --rotatation: 300deg;
+        --speed: 19s;
+        --size: 3px;
+        --starting-x: 6px;
+        --starting-y:-20px;
+        bottom: -16px;
+        left: 44px;
+      }
+    }
+  }
+
+  .dot {
+    position: absolute;
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    transition: transform calc(var(--speed) / 12) ease;
+    transform: translate(var(--starting-x),
+               var(--starting-y)) rotate(var(--rotatation));
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #00BFFF;
+      box-shadow: 0 0 6px #00BFFF,
+                  0 0 4px #ADD8E6 inset,
+                  0 0 2px 1px rgba(176, 224, 230, 0.2588235294);
+      animation: hoverFirefly var(--speed) infinite,
+                 dimFirefly calc(var(--speed) / 2) infinite calc(var(--speed) / 3);
+      animation-play-state: paused;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  @keyframes dimFirefly {
+    0%, 100% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0.4;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    75% {
+      opacity: 0.5;
+    }
+  }
+  @keyframes hoverFirefly {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    12% {
+      transform: translate(3px, 1px);
+    }
+    24% {
+      transform: translate(-2px, 3px);
+    }
+    37% {
+      transform: translate(2px, -2px);
+    }
+    55% {
+      transform: translate(-1px, 0);
+    }
+    74% {
+      transform: translate(0, 2px);
+    }
+    88% {
+      transform: translate(-3px, -1px);
+    }
+  }
+}

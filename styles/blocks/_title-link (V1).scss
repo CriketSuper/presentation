@@ -1,0 +1,50 @@
+@use '../helpers' as *;
+
+.all-links {
+  display: flex;
+  justify-content: end;
+  margin-top: rem(40);
+
+  &__link {
+    display: grid;
+    color: var(--color4);
+    font-family: Krub, var(--default-font-family);
+    font-size: rem(32);
+    font-weight: 700;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    gap: rem(10);
+
+    span {
+      &:hover {
+        color: var(--color1);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: rem(1);
+        left: 0;
+        width: 0;
+        height: rem(5);
+        background-color: var(--color1);
+        transition: width var(--transition-duration) ease;
+      }
+
+      &:hover::after {
+        width: calc(100% - rem(65));
+      }
+    }
+  }
+
+  &--arrow-circle {
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,21 @@
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+@use 'blocks/header';
+@use 'blocks/hero';
+@use 'blocks/icon';
+@use 'blocks/title-link';
+@use 'blocks/burger-button.scss';
+@use 'blocks/button.scss';
+@use 'blocks/news';
+@use 'blocks/ad';
+@use 'blocks/statistics';
+@use 'blocks/specialties';
+@use 'blocks/actual';
+@use 'blocks/projects';
+@use 'blocks/important-links';
+@use 'blocks/footer';
+@use 'blocks/teachers'
